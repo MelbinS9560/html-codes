@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Animations</title>
+        <style>
+            .box{
+                width:100px;height:100px;
+                background-color: red;
+                animation-name: move;
+                animation-iteration-count: infinite;
+                animation-duration: 10s;
+                animation-delay: 1s;
+                animation-direction: alternate;
+            }
+            @keyframes move{
+                from{
+                    transform: translateX(0);
+                }
+                to{
+                    transform: translateY(200px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Animation Example</h1>
+        <div class="box"></div>
+    </body>
+</html>

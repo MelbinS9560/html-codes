@@ -1,0 +1,29 @@
+<htmml>
+    <head>
+        <title>canvas transform</title>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="400" height="500">
+            <script>
+                const canvas=document.getElementById("myCanvas");
+                const ctx=canvas.getContext("2d");
+                ctx.fillStyle="red";
+                ctx.fillRect(50,50,100,100);
+                ctx.translate(200,100);
+                ctx.rotate(Math.PI/4);
+                ctx.scale(2,2);
+                
+                ctx.fillStyle="blue";
+                ctx.fillRect(-50,-50,100,100);
+                ctx.setTransform(1,0,0,1,0,0);
+
+                ctx.fillStyle="green";
+                ctx.fillRect(200,200,100,100);
+                ctx.transform(1,0.5,-0.5,1,0,0);
+                
+                ctx.fillStyle="orange";
+                ctx.fillRect(200,200,100,100);
+            </script>
+        </canvas>
+    </body>
+</htmml>
